@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { adminModel } = require("../db");
 
 const adminRouter = Router();
 
@@ -14,7 +15,7 @@ adminRouter.post("/signin", function (req, res) {
   });
 });
 
-adminRouter.use(adminMiddleware);
+//adminRouter.use(adminMiddleware);
 
 adminRouter.post("/course", function (req, res) {
   res.json({
